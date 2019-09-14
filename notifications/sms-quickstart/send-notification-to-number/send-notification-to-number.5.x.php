@@ -6,11 +6,10 @@ require_once '/path/to/vendor/autoload.php';
 
 use Twilio\Rest\Client;
 
-// Your Account SID and Auth Token from https://www.twilio.com/console
-$accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-$authToken = "your_auth_token";
+$accountSid = "AC579fd3bd74c37392a4cb0a1696afc7de";
+$authToken = "f059c296f479280082b86cfd407978a4";
 
-$serviceSid = "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+$serviceSid = "ISf6b5e2d20f0dbfdf294a85ecd377992e";
 
 // Initialize the client
 $client = new Client($accountSid, $authToken);
@@ -19,7 +18,7 @@ $client = new Client($accountSid, $authToken);
 $notification = $client
     ->notify->services($serviceSid)
     ->notifications->create([
-        "toBinding" => '{"binding_type":"sms", "address":"+1651000000000"}'
+        "toBinding" => '{"binding_type":"sms", "address":"+8437324910"}'
         'body' => 'Knok-Knok! This is your first Notify SMS'
     ]);
 
